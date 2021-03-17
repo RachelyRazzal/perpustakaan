@@ -1,0 +1,7 @@
+JvmtiExport can_access_local_variables 0
+JvmtiExport can_hotswap_or_post_breakpoint 0
+JvmtiExport can_post_on_exceptions 0
+# 123 ciObject found
+ciMethod java/lang/Math floor (D)D 2113 1 1584 0 -1
+ciMethod java/lang/Math abs (D)D 0 0 1 0 -1
+ciMethod 

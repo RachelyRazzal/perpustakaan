@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fb4f479e-a4d9-4815-b4ad-b8f80b9a5d91">
+	<property name="ireport.zoom" value="0.8264462809917362"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     pengembalian.`Kode_pengembalian` AS pengembalian_Kode_pengembalian,
+     pengembalian.`Kode_pinjam` AS pengembalian_Kode_pinjam,
+     pengembalian.`Nama_anggota` AS pengembalian_Nama_anggota,
+     pengembalian.`Tanggal_pinjam` AS pengembalian_Tanggal_pinjam,
+     pengembalian.`Jumlah_pinjam` AS pengembalian_Jumlah_pinjam,
+     pengembalian.`Tanggal_kembali` AS pengembalian_Tanggal_kembali,
+     pengembalian.`Keterlambatan` AS pengembalian_Keterlambatan,
+     pengembalian.`Denda` AS pengembalian_Denda
+FROM
+     `pengembalian` pengembalian]]>
+	</queryString>
+	<field name="pengembalian_Kode_pengembalian" class="java.lang.String"/>
+	<field name="pengembalian_Kode_pinjam" class="java.lang.String"/>
+	<field name="pengembalian_Nama_anggota" class="java.lang.String"/>
+	<field name="pengembalian_Tanggal_pinjam" class="java.sql.Date"/>
+	<field name="pengembalian_Jumlah_pinjam" class="java.lang.String"/>
+	<field name="pengembalian_Tanggal_kembali" class="java.sql.Date"/>
+	<field name="pengembalian_Keterlambatan" class="java.lang.String"/>
+	<field name="pengembalian_Denda" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="293" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="33edf7d1-c60c-480b-8e3d-276448561347" x="194" y="85" width="552" height="69"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Jl. Madrasah RT 004/02, Pangkalan Jati, Cinere, Kota Depok Telp.(021) 7666 103 No.HP 0813 1815]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="382deb03-3cd1-416d-999f-2916b5a0d0e6" x="345" y="224" width="235" height="38"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Pengembalian]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3d7f66ec-34d1-4fa2-9a0e-248b95de74ed" x="194" y="52" width="608" height="33"/>
+				<textElement textAlignment="Center">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[PERPUSTAKAAN MTS SALAFIYAH SYAFI'IYYAH]]></text>
+			</staticText>
+			<image hAlign="Center">
+				<reportElement uuid="f68bf05a-0d4a-48a3-a983-cb77931fc2d3" x="0" y="0" width="194" height="154"/>
+				<imageExpression><![CDATA["C:\\Users\\ASUS\\Documents\\NetBeansProjects\\Perpustakaan\\src\\ICON\\logo.jpeg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="e94b96d8-4e93-45c1-9908-24ea2165f5bd" x="0" y="1" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Pengembalian]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="19e70d27-5c6c-4724-8e5d-e56fe13435ac" x="245" y="1" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Anggota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="32b2921b-4820-4c7e-953f-43fd4204f2fe" x="114" y="0" width="118" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal Pengembalian]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="08a8ff70-dec9-4d44-a0da-cd40fe6ea8c8" x="382" y="1" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jumlah Pinjam]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="535ef67a-07a5-417f-a321-bb983dd84f6f" x="512" y="1" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Keterlambatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1834fad4-186a-4cab-a42a-134123416338" x="646" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Denda]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement uuid="94b30007-f74a-425c-bef7-fa5dfd0cd1ae" x="0" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{pengembalian_Kode_pengembalian}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8d47e5b6-9d22-48c9-beb3-97e441003728" x="245" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{pengembalian_Nama_anggota}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1cbc11c6-cbc0-42eb-b1de-394e5aca5153" x="114" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{pengembalian_Tanggal_pinjam}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="308ab513-b903-40b1-b64a-519cb1692bc7" x="382" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{pengembalian_Jumlah_pinjam}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0b7359f5-cb1f-4537-9475-117d66b91f7a" x="512" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{pengembalian_Keterlambatan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1f6a509e-df74-4e86-b5d0-cc94606cc1ed" x="646" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{pengembalian_Denda}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

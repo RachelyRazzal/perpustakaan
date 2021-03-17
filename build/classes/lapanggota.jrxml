@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a3971108-93a5-4d35-8f10-9d9e9f92c4b9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     anggota.`Kode_anggota` AS anggota_Kode_anggota,
+     anggota.`Nama_anggota` AS anggota_Nama_anggota,
+     anggota.`Jenis_kelamin` AS anggota_Jenis_kelamin,
+     anggota.`Tanggal_lahir` AS anggota_Tanggal_lahir,
+     anggota.`Tempat_lahir` AS anggota_Tempat_lahir,
+     anggota.`Alamat` AS anggota_Alamat,
+     anggota.`No_hp` AS anggota_No_hp
+FROM
+     `anggota` anggota]]>
+	</queryString>
+	<field name="anggota_Kode_anggota" class="java.lang.String"/>
+	<field name="anggota_Nama_anggota" class="java.lang.String"/>
+	<field name="anggota_Jenis_kelamin" class="java.lang.String"/>
+	<field name="anggota_Tanggal_lahir" class="java.sql.Date"/>
+	<field name="anggota_Tempat_lahir" class="java.lang.String"/>
+	<field name="anggota_Alamat" class="java.lang.String"/>
+	<field name="anggota_No_hp" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="249" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="33edf7d1-c60c-480b-8e3d-276448561347" x="212" y="67" width="552" height="69"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Jl. Madrasah RT 004/02, Pangkalan Jati, Cinere, Kota Depok Telp.(021) 7666 103 No.HP 0813 1815]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="382deb03-3cd1-416d-999f-2916b5a0d0e6" x="302" y="201" width="235" height="38"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Data Anggota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3d7f66ec-34d1-4fa2-9a0e-248b95de74ed" x="212" y="34" width="588" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[PERPUSTAKAAN MTS SALAFIYAH SYAFI'IYYAH]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="d168b477-b0fb-4ff7-9b0e-be9c2301945d" x="10" y="190" width="802" height="1"/>
+			</line>
+			<image hAlign="Center">
+				<reportElement uuid="9fb310fa-c969-45f1-83df-b4f242694640" x="10" y="0" width="202" height="171"/>
+				<imageExpression><![CDATA["C:\\Users\\ASUS\\Documents\\NetBeansProjects\\Perpustakaan\\src\\ICON\\logo.jpeg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="54f3befe-a65f-49ac-a65f-ecf0dd1d509e" x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Kode Anggota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="31ee0609-9166-497e-8efa-1f83ad573471" x="130" y="2" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nama Anggota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="111aa10a-1a60-4355-859d-6e33915e7ae6" x="255" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Jenis Kelamin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b3da2ce7-ae44-4f82-b708-6eaac234d80b" x="381" y="2" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Tanggal Lahir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b978f9d9-7393-4705-9339-3e46eda610b8" x="504" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Tempat Lahir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4b374c96-5927-4902-8753-c8b2932b0cf7" x="627" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a252e656-f080-4270-9551-2a834b52ff98" x="740" y="2" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[No. Hp]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement uuid="fbda050a-78a5-467e-9053-9d35bd921cf5" x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{anggota_Kode_anggota}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1d62acc5-60d5-4724-8e91-b1af60d8c384" x="130" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{anggota_Nama_anggota}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="583dadcc-db11-47b2-b4dc-9fb51de7b930" x="255" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{anggota_Jenis_kelamin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="bf206e3b-a9a7-4b18-a7c4-6946aceac7e9" x="381" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{anggota_Tanggal_lahir}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c8e0864c-38eb-4153-bb89-9aae4d7c464d" x="504" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{anggota_Tempat_lahir}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d9c965f8-ed00-4a4f-9c58-cef983912d03" x="627" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{anggota_Alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="850c9ced-16be-47a7-957a-45c867650332" x="740" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{anggota_No_hp}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

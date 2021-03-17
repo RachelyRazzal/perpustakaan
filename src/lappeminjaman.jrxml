@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c54e5dfa-75aa-4a5e-8ded-9e93e9ce0c2d">
+	<property name="ireport.zoom" value="0.9090909090909095"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     peminjam.`Kode_peminjam` AS peminjam_Kode_peminjam,
+     peminjam.`Tanggal_pinjam` AS peminjam_Tanggal_pinjam,
+     peminjam.`Kode_petugas` AS peminjam_Kode_petugas,
+     peminjam.`Nama_petugas` AS peminjam_Nama_petugas,
+     peminjam.`Kode_anggota` AS peminjam_Kode_anggota,
+     peminjam.`Nama_anggota` AS peminjam_Nama_anggota,
+     peminjam.`Jumlah_pinjam` AS peminjam_Jumlah_pinjam
+FROM
+     `peminjam` peminjam]]>
+	</queryString>
+	<field name="peminjam_Kode_peminjam" class="java.lang.String"/>
+	<field name="peminjam_Tanggal_pinjam" class="java.sql.Date"/>
+	<field name="peminjam_Kode_petugas" class="java.lang.String"/>
+	<field name="peminjam_Nama_petugas" class="java.lang.String"/>
+	<field name="peminjam_Kode_anggota" class="java.lang.String"/>
+	<field name="peminjam_Nama_anggota" class="java.lang.String"/>
+	<field name="peminjam_Jumlah_pinjam" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="267" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="33edf7d1-c60c-480b-8e3d-276448561347" x="184" y="75" width="552" height="69"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Jl. Madrasah RT 004/02, Pangkalan Jati, Cinere, Kota Depok Telp.(021) 7666 103 No.HP 0813 1815]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3d7f66ec-34d1-4fa2-9a0e-248b95de74ed" x="184" y="42" width="618" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[PERPUSTAKAAN MTS SALAFIYAH SYAFI'IYYAH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="382deb03-3cd1-416d-999f-2916b5a0d0e6" x="335" y="214" width="202" height="38"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Laporan Peminjaman]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="d168b477-b0fb-4ff7-9b0e-be9c2301945d" x="0" y="186" width="802" height="1"/>
+			</line>
+			<image>
+				<reportElement uuid="a02693cd-7875-4c67-b79d-3b4e9bc99a8a" x="9" y="10" width="175" height="166"/>
+				<imageExpression><![CDATA["C:\\Users\\ASUS\\Documents\\NetBeansProjects\\Perpustakaan\\src\\ICON\\logo.jpeg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="656ab3bd-f880-49ec-add0-b852ed0a2173" x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Kode Peminjam]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5872bff1-e361-4d00-8841-1cb6051083da" x="140" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Tanggal_pinjam]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="05b83fe8-f803-41b9-993c-500534a22a11" x="279" y="1" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nama Petugas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1d4efc31-8fa1-4673-962a-f51dd6c51d54" x="417" y="1" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Kode Anggota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="92c6943c-8db7-4555-a7b2-542a18f42284" x="555" y="1" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nama Anggota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="37ba17d9-b577-4d2c-9f14-3ffa7912df8c" x="684" y="1" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Jumlah Pinjam]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement uuid="b6280839-22bd-4e04-9c8a-0466d5823984" x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{peminjam_Kode_peminjam}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="44d761f4-1024-403b-91df-7c9b2a5e04e4" x="417" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{peminjam_Kode_anggota}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="be18bb8c-0c10-4d72-9638-42b5ac0fafb7" x="684" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{peminjam_Jumlah_pinjam}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="dd70d6d3-d653-437a-b0e2-0305774274a6" x="555" y="1" width="100" height="19"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{peminjam_Nama_anggota}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4a536f90-6898-4646-a34d-ca382a47fc6a" x="279" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{peminjam_Nama_petugas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="bc56c3e8-f18c-43d8-9cab-42bb05ddd299" x="140" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{peminjam_Tanggal_pinjam}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

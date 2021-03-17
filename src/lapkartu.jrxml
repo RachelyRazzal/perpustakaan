@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="234" pageHeight="204" orientation="Landscape" columnWidth="214" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" uuid="bd37ace8-7a5a-43c9-b9bf-fc773f0a4555">
+	<property name="ireport.zoom" value="1.2100000000000013"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Kode_anggota" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from anggota where Kode_anggota like $P{Kode_anggota}]]>
+	</queryString>
+	<field name="Kode_anggota" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nama_anggota" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nomor_induk_sekolah" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Jenis_kelamin" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tanggal_lahir" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tempat_lahir" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="No_hp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="102" splitType="Stretch">
+			<image>
+				<reportElement uuid="ba93f16e-c6e9-41bd-a926-2005e2e98f97" x="18" y="0" width="60" height="50"/>
+				<imageExpression><![CDATA["C:\\Users\\ASUS\\Desktop\\aaaa.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="ef34121c-10bd-4215-b17c-902ff4722a13" x="0" y="0" width="78" height="20"/>
+				<textElement/>
+				<text><![CDATA[Kode anggota]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="fe3693c0-8c13-400f-a8f0-4482aaddbfd9" x="90" y="20" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{Kode_anggota}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="91" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="2caf17ca-459f-4236-b4ab-e6e788d6e860" x="78" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Tanggal_lahir}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3e4dde46-001a-42ed-8fd7-be9229c150c8" x="78" y="24" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Nomor_induk_sekolah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4045d5b1-2c6e-4da1-9e9a-c1287ff193ff" x="94" y="44" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Nama_anggota}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
